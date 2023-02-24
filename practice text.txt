@@ -1,0 +1,90 @@
+===================================
+some basic linux commands
+===================================
+
+1. ls - list directory
+
+2. mkdir - make directory
+
+3. cd - change directory -> (./ - into, ../ out to)
+
+===================================
+git commands and their explanation
+===================================
+
+1. git init - initialize empty git repository, start with git:(Master)
+
+2. -a - show hidden files in mac and linux
+
+3. touch x.txt - to create new file, here a txt file
+
+4. git status - to check what modifications have been done
+
+5. untracked files - all files which have been modified but not tracked
+
+6. git add ./ indivisual files - we add all the untracked files to repository
+
+7. git commit -m "any comments" - commits changes with comments.
+
+8. git log - shows entire history of commit history
+
+9. git reset (commit id here) - to reset the commit logs and erase all above commits
+
+10. git stash - try everything new codebase without having changes saved on current thing
+
+11. git stash pop - all backstage people come back to staging area
+
+12. git stash clear - erase backstage
+
+13. git remote add origin https:// github.com/url_name - Url to be attached to the project
+
+14. git remote -v - show all urls that are atached to the folder
+
+15. git merge (branch name here) - merges that specific branch
+
+====================================
+Github Basics and all what-not
+====================================
+
+1. for better code review - for every feature you'd have have one pull request,
+so rule is such that we have new pull request for every feature or request.
+
+2. everyone is working on their own pull request.
+
+3. create new branch for every new feature so that you can open new pull request.
+
+4. to remove the commit, copy the one below the commkit and do git reset (file ID)
+so it will be unstaged, then i will do git add ., then git stash.
+
+5. Remove a commit from pull request by force push: when file has more commits and you want to upload new file, you force push that.
+
+6. how to make forked project even/ synced with main branch?
+-> git checkout
+-> fetch all commits:
+	git log
+	git fetch --all --prune (even the deleted ones)
+	git reset --hard upstream/main
+	git log
+	git push origin main
+	
+Similarly:	
+	git pull upstream main
+	git push origin main
+# new branch is created at head
+
+7. squash commits in a single command - use rebase command
+	git rebase -i (id for commit)
+	pick/ squash
+	escape => :x
+git log
+git push origin (branch name)
+
+we can use hard to reset new comit which merged the 4 files.
+
+8. how to resolve merge conflicts:
+	we have 2 changes and a conflict->
+	change #1: Rahul's PR
+	change #2: Kunal's PR
+Mark as resolve on top right and do merge, EZPZ.
+
+9. Now onl hands-on is remaining...
